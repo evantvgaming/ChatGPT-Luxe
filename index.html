@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>ChatGPT LUXE™ – 79,99€</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: radial-gradient(circle, #2b2100, #000);
+      color: #f5d76e;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(90deg, #ffd700, #b8860b);
+      color: black;
+      padding: 15px;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .price {
+      background: black;
+      color: gold;
+      padding: 5px 10px;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    .chat {
+      flex: 1;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .msg {
+      margin-bottom: 15px;
+    }
+
+    .user {
+      color: #ffffff;
+    }
+
+    .bot {
+      color: #f5d76e;
+      font-style: italic;
+    }
+
+    footer {
+      display: flex;
+      padding: 10px;
+      background: #111;
+      gap: 10px;
+    }
+
+    input {
+      flex: 1;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    button {
+      padding: 10px 15px;
+      background: gold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .badge {
+      font-size: 12px;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div>💎 ChatGPT LUXE™</div>
+  <div class="price">79,99€ / mois – Essai gratuit 3 jours</div>
+</header>
+
+<div class="chat" id="chat">
+  <div class="msg bot">
+    Bienvenue sur ChatGPT LUXE™ ✨  
+    Intelligence Artificielle Haut de Gamme Certifiée Premium Gold Supreme.  
+    Pose ta question (mais fais vite, j’ai la flemme).
+  </div>
+</div>
+
+<footer>
+  <input id="input" placeholder="Écris ta question de riche…" />
+  <button onclick="send()">Envoyer</button>
+</footer>
+
+<script>
+  const chat = document.getElementById("chat");
+  const input = document.getElementById("input");
+
+  const responses = [
+    "Trouduc.",
+    "Ta gueule, j’suis une IA de luxe.",
+    "Franchement… paye 79,99€ et pose pas ce genre de question.",
+    "J’ai la flemme. Reviens demain.",
+    "Réponse premium indisponible.",
+    "C’est une question de pauvre ça.",
+    "Je pourrais répondre… mais non.",
+    "Ferme-la stp.",
+    "Erreur IA 403 : Respecte-moi.",
+    "Demande à une IA gratuite, moi je suis cher."
+  ];
+
+  function send() {
+    if (!input.value) return;
+
+    const userMsg = document.createElement("div");
+    userMsg.className = "msg user";
+    userMsg.textContent = "👤 " + input.value;
+    chat.appendChild(userMsg);
+
+    const botMsg = document.createElement("div");
+    botMsg.className = "msg bot";
+    const r = responses[Math.floor(Math.random() * responses.length)];
+    botMsg.textContent = "🤖 " + r;
+    chat.appendChild(botMsg);
+
+    input.value = "";
+    chat.scrollTop = chat.scrollHeight;
+  }
+</script>
+
+</body>
+</html>
