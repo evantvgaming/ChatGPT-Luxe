@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>ChatGPT LUXE™ — Démo Parodie</title>
+  <title>ChatGPT LUXE™ — Béta</title>
   <style>
     :root{
       --bg1:#2b2100;
@@ -291,7 +291,7 @@
       line-height:1.25;
     }
 
-    /* Modal (fake checkout) */
+    /* Modal (checkout) */
     .modal{
       position:fixed; inset:0;
       display:none;
@@ -352,7 +352,7 @@
 
 <body>
 <header>
-  <div class="brand">💎 ChatGPT LUXE™ <span class="badge">PARODIE / DÉMO</span></div>
+  <div class="brand">💎 ChatGPT LUXE™ <span class="badge"> DÉMO</span></div>
   <div class="price">
     <div class="pill">79,99€ /mois</div>
     <div class="trial">Essai gratuit (démo) : <b id="trialLeft">3</b> jours</div>
@@ -364,15 +364,15 @@
   <aside class="sidebar">
     <div class="side-top">
       <div class="disclaimer">
-        ⚠️ Ceci est une <u>parodie</u> / démo. <br>
+        ⚠️ Ceci est une <u>vraie</u> / démo. <br>
         Seulement  paiement réel. Touts les produits sont réels. <br>
         Juste du prix doré et de la flemme.
       </div>
 
       <div class="switches">
-        <div class="chip active" id="modeRude" onclick="toggleMode('rude')">Mode Insolent 😈</div>
-        <div class="chip" id="modePNJ" onclick="toggleMode('pnj')">Mode PNJ 🧍‍♂️</div>
-        <div class="chip" id="modeSoft" onclick="toggleMode('soft')">Mode Faux-Poli 🤝</div>
+        <div class="chip active" id="modeRude" onclick="toggleMode('rude')">Mode Normal</div>
+        <div class="chip" id="modePNJ" onclick="toggleMode('pnj')">Mode Citoyen</div>
+        <div class="chip" id="modeSoft" onclick="toggleMode('soft')">Mode Poli</div>
       </div>
 
       <div class="luxbox">
@@ -388,7 +388,7 @@
       <button class="btn gold" onclick="openCheckout()">💳 Passer en ULTRA LUXE 149,99€</button>
       <button class="btn" onclick="showPaywall()">🔒 Débloquer “Réponses Premium”</button>
       <button class="btn" onclick="fakeUpdate()">🪙 Télécharger la Mise à Jour Or</button>
-      <button class="btn" onclick="downloadInvoice()">🧾 Télécharger facture (FAKE)</button>
+      <button class="btn" onclick="downloadInvoice()">🧾 Télécharger facture </button>
       <button class="btn" onclick="newChat()">🧼 Nouveau chat</button>
       <button class="btn" onclick="clearHistory()">🧹 Effacer l’historique</button>
       <button class="btn danger" onclick="panic()">🚨 Mode Panique (sirènes)</button>
@@ -397,7 +397,7 @@
     <div class="tiny">
       🧠 “IA haut de gamme” = <b>réponses pré-écrites</b>. <br>
       💾 L’historique est stocké <b>localement</b> (dans ton navigateur). <br>
-      (Pas de serveur, pas de collecte. Juste moi et ma flemme.)
+      (Pas de serveur, collecte de donnée. Juste moi et ma flemme.)
     </div>
   </aside>
 
@@ -430,7 +430,7 @@
   </div>
 </div>
 
-<!-- Fake checkout modal -->
+<!--  checkout modal -->
 <div class="modal" id="checkout">
   <div class="card">
     <h3>💎 ULTRA LUXE — 149,99€</h3>
@@ -440,34 +440,34 @@
 
     <div class="row">
       <div class="field">
-        <label>Nom (pour faire sérieux)</label>
+        <label>Nom </label>
         <input placeholder="Jean-Michel Premium" />
       </div>
       <div class="field">
-        <label>Email (ne sera PAS utilisé)</label>
+        <label>Email </label>
         <input placeholder="richou@blingbling.com" />
       </div>
     </div>
 
     <div class="row">
       <div class="field">
-        <label>Carte (FAKE)</label>
+        <label>Carte </label>
         <input placeholder="0000 0000 0000 0000" />
       </div>
       <div class="field">
-        <label>Crypto (FAKE)</label>
+        <label>Crypto </label>
         <input placeholder="0.00 GOATCOIN" />
       </div>
     </div>
 
     <div class="warn">
-      ✅ Aucun paiement réel. Aucun enregistrement. <br>
-      C’est une parodie. Si tu voulais vraiment payer 149,99€, respire un coup.
+      ✅ Paiement réel. Enregistrement. <br>
+      Merci d'avoir payer 149,99€.
     </div>
 
     <div class="modal-actions">
       <button class="close" onclick="closeCheckout()">Fermer</button>
-      <button class="ok" onclick="confirmCheckout()">Payer (FAKE)</button>
+      <button class="ok" onclick="confirmCheckout()">Payer </button>
     </div>
   </div>
 </div>
